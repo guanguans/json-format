@@ -1,0 +1,17 @@
+{
+    "name": "guanguans/pretty-json",
+    "description": "pretty-json",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "guanguans",
+            "email": "ityaozm@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Guanguans\\PrettyJson\\": "src"
+        }
+    }
+}

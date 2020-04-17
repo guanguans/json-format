@@ -1,0 +1,32 @@
+language: php
+
+php:
+    - 5.3
+    - 5.4
+    - 5.5
+    - 5.6
+    - 7.0
+    - 7.1
+    - 7.2
+    - 7.3
+    - 7.4
+
+dist: trusty
+sudo: true
+
+before_script:
+    - composer self-update
+    - composer install --no-interaction --dev
+
+script:
+    - pwd
+    - ./vendor/bin/phpunit --debug --verbose --color=always --coverage-clover=coverage.xml
+
+after_script:
+    - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+    email: true
+
+matrix:
+    fast_finish: true

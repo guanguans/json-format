@@ -1,28 +1,64 @@
-<h1 align="center"> pretty-json </h1>
+<h1 align="center">pretty-json</h1>
 
-<p align="center"> pretty-json.</p>
+<p align="center">Format json string.</p>
 
+[![Build Status](https://travis-ci.org/guanguans/pretty-json.svg?branch=master)](https://travis-ci.org/guanguans/pretty-json)
+[![Build Status](https://scrutinizer-ci.com/g/guanguans/pretty-json/badges/build.png?b=master)](https://scrutinizer-ci.com/g/guanguans/pretty-json/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/guanguans/pretty-json/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/guanguans/pretty-json/?branch=master)
+[![codecov](https://codecov.io/gh/guanguans/pretty-json/branch/master/graph/badge.svg)](https://codecov.io/gh/guanguans/pretty-json)
+[![StyleCI](https://github.styleci.io/repos/255808426/shield?branch=master)](https://github.styleci.io/repos/255808426)
+[![Total Downloads](https://poser.pugx.org/guanguans/pretty-json/downloads)](https://packagist.org/packages/guanguans/pretty-json)
+[![Latest Stable Version](https://poser.pugx.org/guanguans/pretty-json/v/stable)](https://packagist.org/packages/guanguans/pretty-json)
+[![License](https://poser.pugx.org/guanguans/pretty-json/license)](https://packagist.org/packages/guanguans/pretty-json)
+
+## Requirements
+
+* PHP >= 5.3
+* ext-json
 
 ## Installing
 
-```shell
-$ composer require guanguans/pretty-json -vvv
+``` shell
+$ composer require guanguans/pretty-json -v
 ```
 
 ## Usage
 
-TODO
+### Code
 
-## Contributing
+``` php
+<?php
+require __DIR__.'/vendor/autoload.php';
 
-You can contribute in one of three ways:
+use Guanguans\PrettyJson\PrettyJson;
 
-1. File bug reports using the [issue tracker](https://github.com/guanguans/pretty-json/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/guanguans/pretty-json/issues).
-3. Contribute new features or update the wiki.
+$json = <<<'JSON'
+{"name":"guanguans\/pretty-json","keywords":["json","format","pretty"],"description":"Format json string."}
+JSON;
 
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
+echo PrettyJson::Pretty($json);
+```
+
+### Output
+
+``` json
+{
+    "name": "guanguans\/pretty-json",
+    "keywords": [
+        "json",
+        "format",
+        "pretty"
+    ],
+    "description": "Format json string."
+}
+```
+
+## Testing
+
+``` shell
+$ composer test
+```
 
 ## License
 
-MIT
+[MIT](LICENSE)

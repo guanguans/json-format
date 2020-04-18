@@ -18,8 +18,8 @@ if (!function_exists('json_format')) {
      *
      * @throws \Guanguans\JsonFormat\Exceptions\InvalidArgumentException
      */
-    function json_format($json)
+    function json_format($json, $options = JSON_PRETTY_PRINT, $depth = 512)
     {
-        return Json::format($json);
+        return Json::format($json, $options, $depth);
     }
 }

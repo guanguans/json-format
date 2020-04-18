@@ -33,7 +33,10 @@
     "autoload": {
         "psr-4": {
             "Guanguans\\JsonFormat\\": "src"
-        }
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

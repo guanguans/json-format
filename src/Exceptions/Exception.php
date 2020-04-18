@@ -8,8 +8,8 @@
  * This source file is subject to the MIT license that is bundled.
  */
 
-namespace Guanguans\JsonFormat;
+namespace Guanguans\JsonFormat\Exceptions;
 
-class InvalidArgumentException extends Exception
+class Exception extends \Exception
 {
 }

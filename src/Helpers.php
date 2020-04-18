@@ -16,7 +16,7 @@ if (!function_exists('json_format')) {
      *
      * @return false|string
      *
-     * @throws \Guanguans\JsonFormat\InvalidArgumentException
+     * @throws \Guanguans\JsonFormat\Exceptions\InvalidArgumentException
      */
     function json_format($json)
     {

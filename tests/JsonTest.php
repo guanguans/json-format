@@ -10,7 +10,7 @@
 
 namespace Guanguans\Tests;
 
-use Guanguans\JsonFormat\InvalidArgumentException;
+use Guanguans\JsonFormat\Exceptions\InvalidArgumentException;
 use Guanguans\JsonFormat\Json;
 
 class JsonTest extends TestCase

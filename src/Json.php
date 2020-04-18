@@ -10,6 +10,8 @@
 
 namespace Guanguans\JsonFormat;
 
+use Guanguans\JsonFormat\Exceptions\InvalidArgumentException;
+
 class Json implements JsonInterface
 {
     /**
@@ -17,7 +19,7 @@ class Json implements JsonInterface
      *
      * @return false|string
      *
-     * @throws \Guanguans\JsonFormat\InvalidArgumentException
+     * @throws \Guanguans\JsonFormat\Exceptions\InvalidArgumentException
      */
     public static function format($json)
     {

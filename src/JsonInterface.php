@@ -10,6 +10,7 @@
 
 namespace Guanguans\JsonFormat;
 
-class InvalidArgumentException extends Exception
+interface JsonInterface
 {
+    public static function format($json);
 }

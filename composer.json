@@ -1,5 +1,5 @@
 {
-    "name": "guanguans/pretty-json",
+    "name": "guanguans/json-format",
     "keywords": [
         "json",
         "format",
@@ -7,8 +7,8 @@
     ],
     "description": "Format json string.",
     "support": {
-        "issues": "https://github.com/guanguans/pretty-json/issues",
-        "source": "https://github.com/guanguans/pretty-json"
+        "issues": "https://github.com/guanguans/json-format/issues",
+        "source": "https://github.com/guanguans/json-format"
     },
     "type": "library",
     "minimum-stability": "dev",
@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Guanguans\\PrettyJson\\": "src"
+            "Guanguans\\JsonFormat\\": "src"
         }
     },
     "autoload-dev": {

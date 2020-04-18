@@ -1,6 +1,6 @@
 <?php
 $header = <<<EOF
-This file is part of the guanguans/pretty-json.
+This file is part of the guanguans/json-format.
 
 (c) guanguans <ityaozm@gmail.com>
 

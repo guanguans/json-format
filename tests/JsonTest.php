@@ -24,7 +24,6 @@ class JsonTest extends TestCase
             Json::format($array);
             $this->fail('Faild to assert format method throw exception with invalid argument.');
         }
-        $this->assertIsString('To do testing.');
     }
 
     public function testInvalidJson()
@@ -36,7 +35,6 @@ class JsonTest extends TestCase
             Json::format($string);
             $this->fail('Faild to assert format method throw exception with invalid argument.');
         }
-        $this->assertIsString('To do testing.');
     }
 
     public function testFormat()

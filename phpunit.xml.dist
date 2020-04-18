@@ -16,7 +16,9 @@
     <filter>
         <whitelist>
             <directory suffix=".php">src/</directory>
-            <file>src/Helpers.php</file>
+            <exclude>
+                <file>src/Helpers.php</file>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>

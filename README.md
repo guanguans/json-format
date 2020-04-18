@@ -2,6 +2,8 @@
 
 <p align="center">Format json string.</p>
 
+<p align="center"><img src="./docs/usage.png"></p>
+
 [![Build Status](https://travis-ci.org/guanguans/json-format.svg?branch=master)](https://travis-ci.org/guanguans/json-format)
 [![Build Status](https://scrutinizer-ci.com/g/guanguans/json-format/badges/build.png?b=master)](https://scrutinizer-ci.com/g/guanguans/json-format/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/guanguans/json-format/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/guanguans/json-format/?branch=master)
@@ -13,7 +15,7 @@
 
 ## Requirements
 
-* PHP >= 5.3
+* PHP >= 5.4
 * ext-json
 
 ## Installing
@@ -27,24 +29,21 @@ $ composer require guanguans/json-format -v
 ### Code
 
 ``` php
-``` php
 <?php
 require __DIR__.'/vendor/autoload.php';
 
-use Guanguans\JsonFormat\Json;
-
 $json = <<<'JSON'
-{"name":"guanguans\/json-format","keywords":["json","format","pretty"],"description":"Format json string."}
+{"name":"json-format","keywords":["json","format","pretty"],"description":"Format json string."}
 JSON;
 
-echo Json::format($json);
+echo json_format($json);
 ```
 
 ### Output
 
 ``` json
 {
-    "name": "guanguans\/json-format",
+    "name": "json-format",
     "keywords": [
         "json",
         "format",

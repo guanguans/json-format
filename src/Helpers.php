@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the guanguans/json-format.
+ * This file is part of the guanguans/pretty-json.
  *
  * (c) guanguans <ityaozm@gmail.com>
  *

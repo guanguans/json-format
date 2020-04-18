@@ -17,20 +17,26 @@ class JsonTest extends TestCase
 {
     public function testInvalidString()
     {
-        $array = ['mac-array'];
-        $this->expectException(get_class(new InvalidArgumentException()));
-        $this->expectExceptionMessage(sprintf('Parameter type is not valid string: %s', gettype($array)));
-        Json::format($array);
-        $this->fail('Faild to assert format method throw exception with invalid argument.');
+        if (version_compare(PHP_VERSION, '5.5', '>')) {
+            $array = ['mac-array'];
+            $this->expectException(get_class(new InvalidArgumentException()));
+            $this->expectExceptionMessage(sprintf('Parameter type is not valid string: %s', gettype($array)));
+            Json::format($array);
+            $this->fail('Faild to assert format method throw exception with invalid argument.');
+        }
+        $this->assertIsString('To do testing.');
     }
 
     public function testInvalidJson()
     {
-        $string = 'mac-string';
-        $this->expectException(get_class(new InvalidArgumentException()));
-        $this->expectExceptionMessage(sprintf('Parameter is not valid JSON: %s', $string));
-        Json::format($string);
-        $this->fail('Faild to assert format method throw exception with invalid argument.');
+        if (version_compare(PHP_VERSION, '5.5', '>')) {
+            $string = 'mac-string';
+            $this->expectException(get_class(new InvalidArgumentException()));
+            $this->expectExceptionMessage(sprintf('Parameter is not valid JSON: %s', $string));
+            Json::format($string);
+            $this->fail('Faild to assert format method throw exception with invalid argument.');
+        }
+        $this->assertIsString('To do testing.');
     }
 
     public function testFormat()

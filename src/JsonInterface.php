@@ -12,5 +12,11 @@ namespace Guanguans\JsonFormat;
 
 interface JsonInterface
 {
-    public static function format($json);
+    /**
+     * @param $json
+     * @param $options
+     *
+     * @return string
+     */
+    public static function format($json, $options);
 }

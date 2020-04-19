@@ -13,13 +13,14 @@ use Guanguans\JsonFormat\Json;
 if (!function_exists('json_format')) {
     /**
      * @param $json
+     * @param int $options
      *
-     * @return false|string
+     * @return string
      *
      * @throws \Guanguans\JsonFormat\Exceptions\InvalidArgumentException
      */
-    function json_format($json, $options = JSON_PRETTY_PRINT, $depth = 512)
+    function json_format($json, $options = JSON_PRETTY_PRINT)
     {
-        return Json::format($json, $options, $depth);
+        return Json::format($json, $options);
     }
 }

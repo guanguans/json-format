@@ -18,7 +18,7 @@ class JsonTest extends TestCase
     public function testInvalidString()
     {
         if (version_compare(PHP_VERSION, '5.6', '>')) {
-            $array = ['mac-array'];
+            $array = ['mock-array'];
             $this->expectException(get_class(new InvalidArgumentException()));
             $this->expectExceptionMessage(sprintf('Parameter type is not valid string: %s', gettype($array)));
             Json::format($array);
@@ -29,7 +29,7 @@ class JsonTest extends TestCase
     public function testInvalidJson()
     {
         if (version_compare(PHP_VERSION, '5.6', '>')) {
-            $string = 'mac-string';
+            $string = 'mock-string';
             $this->expectException(get_class(new InvalidArgumentException()));
             $this->expectExceptionMessage(sprintf('Parameter is not valid JSON: %s', $string));
             Json::format($string);
@@ -40,12 +40,12 @@ class JsonTest extends TestCase
     public function testFormat()
     {
         $json = <<<'JSON'
-{"name":"guanguans\/json-format","keywords":["json","format","pretty"],"description":"Format json string."}
+{"name":"guanguans/json-format","keywords":["json","format","pretty"],"description":"Format json string."}
 JSON;
 
         $expected = <<<'JSON'
 {
-    "name": "guanguans\/json-format",
+    "name": "guanguans/json-format",
     "keywords": [
         "json",
         "format",

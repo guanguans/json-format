@@ -22,7 +22,7 @@ class Json implements JsonInterface
      *
      * @throws \Guanguans\JsonFormat\Exceptions\InvalidArgumentException
      */
-    public static function format($json, $options = JSON_PRETTY_PRINT)
+    public static function format($json, $options = 0)
     {
         if (!is_string($json)) {
             throw new InvalidArgumentException(sprintf('Parameter type is not valid string: %s', gettype($json)));
@@ -33,6 +33,6 @@ class Json implements JsonInterface
             throw new InvalidArgumentException(sprintf('Parameter is not valid JSON: %s', $json));
         }
 
-        return json_encode($array, $options);
+        return json_encode($array, $options ? $options | JSON_PRETTY_PRINT : JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     }
 }
